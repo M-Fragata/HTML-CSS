@@ -1,0 +1,137 @@
+
+@charset "utf-8";
+
+/* Header */
+
+body{
+    background-color: rgb(101, 247, 174);
+    margin: 0%;
+}
+
+p{
+    text-indent: 30px;
+    text-align: justify;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+header{
+    background-image: linear-gradient(to bottom, rgb(16, 248, 121), rgb(0, 77, 0));
+    height: 150px;  
+    margin-top: -32px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.466);
+}
+
+header h1{
+    text-align: center;
+    color: white;
+    padding-top: 7px;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.336);
+}
+
+header h2{
+    text-align: center;
+    color: white;
+    max-width: 370px; 
+    display: block;
+    margin: auto; 
+    font-size: 1em; 
+    font-weight: normal;
+    padding-top: 5px;
+}
+
+/* Nav */
+
+nav{
+    background-color: rgb(0, 77, 0);
+    margin: 0px -10px 0px -10px; 
+    padding: 60px 0px 10px 30px;
+    font-weight: bold;
+    font-size: 1.3em;    
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    
+}
+
+nav a:hover{
+    background-color: rgb(47, 255, 141);
+    color: green;
+    border-radius: 10px;
+}
+
+/* Main */
+
+main{
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.363);
+}
+
+main h3{
+    font-size: 2em;
+    color: green;
+}
+main h4{
+    background-image: linear-gradient(to right, rgb(187, 252, 187), transparent);
+    font-size: 1.5em;
+    color: green;
+}
+
+    /* section */
+
+    section{
+        background-color: green ; 
+        padding: 20px;
+        margin: -10px;
+    }
+
+    /* aside */
+
+    aside{
+        background-color:  rgb(101, 247, 174);
+        border-radius: 10px;
+        padding-bottom: 10px;
+    }
+
+    aside h5{
+        background-color: green;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px 10px 0px 0px;
+        color: white;
+        font-size: 1em;
+    }
+    aside p{
+        padding: 0px 20px 0px 20px;
+    }
+
+    aside ul{
+        columns: 2 ;
+    }
+
+/* Footer */
+
+footer{
+    background-color: rgb(0, 75, 0);
+    color: white;
+}
+
+footer p{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin: 0%;
+}
