@@ -1,0 +1,100 @@
+@charset 'utf-8';
+
+
+body{
+    margin: 0px;
+}
+header{
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 330px;
+    width: 100%;
+}
+header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    margin: 0px;
+}
+header p{
+    font-size: 1.2em;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+.text1{ 
+    margin: 50px 0px 60px 30px;
+    font-weight: bold;
+    line-height: 2em;
+    font-size: 4em;
+}
+
+#container1{
+    position: relative;
+    background-image: url(imagem/wallpaper002.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    background-position: center top;
+}
+
+.text2{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    
+    max-width: 850px;
+    padding: 0px 20px 0px 20px;
+    font-weight: bold;
+    line-height: 2em;
+    font-size: 4em;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.39); 
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.418);
+       
+}
+
+#container2{
+    position: relative;
+    background-image: url(imagem/wallpaper002.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    background-position: center top;    
+}
+
+footer{
+    background-color: black;
+    
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em; 
+    margin: 0px;   
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
