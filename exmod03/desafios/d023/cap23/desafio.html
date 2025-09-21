@@ -26,6 +26,7 @@
         main{
             position: relative;
             height: 100vh;
+            
         }
 
         section#telefone{
@@ -39,7 +40,36 @@
         
             background: url(pacote-d013/imagens/frame-iphone.png) no-repeat;
         }
-       
+
+        iframe#tela{
+            position: relative;
+            top: 79px;
+            left: 22px;
+            width: 267px;
+            height: 472px;
+            
+        }
+
+        section#sociais{
+            text-align: right;
+        }
+
+        section#sociais > img{
+           width: 70px;
+           border-radius: 50%;
+           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.403);
+           margin: 20px;
+           box-sizing: border-box;
+        }
+
+        section#sociais > img:hover{
+            border: 2px solid rgba(255, 255, 255, 0.49);
+            cursor: pointer;  
+            transform: translate(-5px,5px);
+            box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.403);
+            transition: transform .5s, border 1s;
+        }
+     
     </style>
 </head>
 <body>
@@ -47,14 +77,28 @@
     <main>
 
         <section id="telefone">
-
+            <iframe src="home.html" name="tela" id="tela" frameborder="0"></iframe>
         </section>
 
         <section id="sociais">
-
+            <img src="pacote-d013/imagens/logo-home.jpg" alt="home-page" id="home" onclick="home()"> <br>
+            <img src="pacote-d013/imagens/logo-youtube.jpg" id="youtube" alt="logo-youtube" onclick="youtube()"> <br>
+            <img src="pacote-d013/imagens/logo-github.jpg" id="github" alt="logo-github" onclick="github()"> <br>
+            <img src="pacote-d013/imagens/logo-instagram.jpg" id="insta" alt="logo-instagram" onclick="instagram()"> <br>
+            <img src="pacote-d013/imagens/logo-twitter.jpg" id="twitter" alt="logo-twitter" onclick="twitter()"> <br>
+            <img src="pacote-d013/imagens/logo-facebook.jpg" id="facebook" alt="logo-facebook" onclick="facebook()">
         </section>
 
     </main>
-        
+
+    <script>
+        function home() {
+            document.querySelector('iframe#tela').src = "home.html";
+        }
+
+        function youtube() {
+            document.querySelector('iframe#tela').src = "youtube.html";
+        }
+    </script>       
 </body>
 </html>
