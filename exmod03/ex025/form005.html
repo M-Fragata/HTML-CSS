@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+<h1>Exemplo de Formulário</h1>
+<form action="cadastro.php" method="get">
+
+<!-- 
+Botão radio serve para marcar apenas uma opção e precisa ter o name igual a todos, também é possível marcar mais de um quando o name é diferente.
+Botão checkbox é usado para marcar várias opções ao mesmo tempo.  
+-->
+
+    <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="sexom" value="M"> <label for="sexom">Masculino</label> <br>
+        <input type="radio" name="sexo" id="sexof" value="F"> <label for="sexof">Feminino</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Esportes favoritos</legend>
+        <input type="checkbox" name="esfut" id="esfut"> <label for="esfut">Futebol</label> <br>
+        <input type="checkbox" name="esbasq" id="esbasq"> <label for="esbasq">Basquete</label> <br>
+        <input type="checkbox" name="esnat" id="esnat"> <label for="esnat">Natação</label> <br>
+        <input type="checkbox" name="estenis" id="estenis"> <label for="estenis">Tênis</label> <br>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</form>
+</body>
+</html>
