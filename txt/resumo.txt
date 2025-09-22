@@ -1,0 +1,311 @@
+Resumo do Curso de HTML5 e CSS3 (Gustavo Guanabara) com Exemplos Práticos
+
+==================================================
+Módulo 1 – Fundamentos do HTML
+==================================================
+
+- Estrutura básica de um documento HTML:
+Exemplo:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Este é meu primeiro parágrafo.</p>
+</body>
+</html>
+
+- Listas:
+Exemplo:
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+- Links:
+Exemplo:
+<a href="https://www.google.com" target="_blank" rel="external">Google</a>
+
+- Imagens:
+Exemplo:
+<img src="imagem.jpg" alt="Descrição da imagem">
+
+--------------------------------------------------
+
+Módulo 2 – Introdução ao CSS
+==================================================
+
+- CSS interno:
+Exemplo:
+<style>
+    body {
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+- Seletores:
+Exemplo:
+p {
+    color: red;
+}
+#titulo {
+    font-size: 24px;
+}
+.lista {
+    font-weight: bold;
+}
+
+- Box Model:
+Exemplo:
+div {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+- Pseudo-classes:
+Exemplo:
+a:hover {
+    color: green;
+}
+
+--------------------------------------------------
+
+Módulo 3 – Recursos avançados do HTML5
+==================================================
+
+- Estrutura semântica:
+Exemplo:
+<header>
+    <h1>Meu Site</h1>
+</header>
+<main>
+    <section>
+        <h2>Notícia</h2>
+        <p>Texto da notícia...</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 - Todos os direitos reservados</p>
+</footer>
+
+- Tabelas:
+Exemplo:
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td>Maria</td>
+        <td>25</td>
+    </tr>
+</table>
+
+- Uso de <thead>, <tbody> e <tfoot>:
+
+Eles dividem a tabela em **cabeçalho**, **corpo** e **rodapé**, ajudando na leitura e organização.
+
+Exemplo:
+<table border="1">
+    <caption>Relatório de Vendas</caption>
+
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Camisa</td>
+            <td>10</td>
+            <td>R$ 50,00</td>
+        </tr>
+        <tr>
+            <td>Calça</td>
+            <td>5</td>
+            <td>R$ 120,00</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="2">Total</td>
+            <td>R$ 850,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+- Mesclar células em tabelas:
+
+1- colspan → mescla colunas (horizontal):
+<table border="1">
+    <tr>
+        <th colspan="2">Informações</th>
+    </tr>
+    <tr>
+        <td>Nome</td>
+        <td>Maria</td>
+    </tr>
+</table>
+
+2- rowspan → mescla linhas (vertical):
+<table border="1">
+    <tr>
+        <th rowspan="2">Contato</th>
+        <td>Email: maria@email.com</td>
+    </tr>
+    <tr>
+        <td>Telefone: (11) 9999-9999</td>
+    </tr>
+
+
+- Formulários e Inputs:
+
+Exemplo básico:
+<form action="cadastro.php" method="post">
+ <fieldset>
+    <legend> Pessoal </legend>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required minlength="6">
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" min="1" max="120">
+
+    <label for="nascimento">Data de Nascimento:</label>
+    <input type="date" id="nascimento" name="nascimento">
+
+</fieldset>
+
+    <label for="cor">Cor favorita:</label>
+    <input type="color" id="cor" name="cor">
+
+    <label for="nivel">Nível de satisfação:</label>
+    <input type="range" id="nivel" name="nivel" min="0" max="10">
+
+    <p>Sexo:</p>
+    <input type="radio" id="masc" name="sexo" value="M">
+    <label for="masc">Masculino</label>
+    <input type="radio" id="fem" name="sexo" value="F">
+    <label for="fem">Feminino</label>
+
+    <p>Interesses:</p>
+    <input type="checkbox" id="html" name="interesses" value="HTML">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="interesses" value="CSS">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="interesses" value="JavaScript">
+    <label for="js">JavaScript</label>
+
+    <label for="arquivo">Enviar arquivo:</label>
+    <input type="file" id="arquivo" name="arquivo">
+
+    <br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+
+    <label for="num">Número: </label>
+    <input type="range" name="num" id="num" min="0" max="10" value="5" oninput="val.innerHTML = Number(num.value)">
+    <output id="val">5</output>
+</form>
+
+output
+
+<h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <fieldset>
+                <legend>Números</legend>
+
+                <p>
+                    <label for="num1">Número 1:</label>
+                    <input type="number" name="num1" id="num1" min="0" max="50" required
+                    oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)">
+                </p>
+
+                <p>
+                    <label for="num2">Número 2: </label>
+                    <input type="number" name="num2" id="num2" min="0" max="50" required oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)">
+                </p>
+                
+                <p>
+                    <label for="soma">Soma: </label>
+                    <output id="soma">0</output>
+                </p>
+
+            </fieldset>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>  
+
+- Multimídia:
+Exemplo:
+<video controls width="320">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+--------------------------------------------------
+
+Módulo 4 – Recursos avançados do CSS3
+==================================================
+
+- Gradiente:
+Exemplo:
+div {
+    background: linear-gradient(to right, red, yellow);
+}
+
+- Sombras:
+Exemplo:
+h1 {
+    text-shadow: 2px 2px 5px gray;
+}
+
+- Bordas arredondadas:
+Exemplo:
+img {
+    border-radius: 50%;
+}
+
+- Transformações e Transições:
+Exemplo:
+button {
+    transition: transform 0.3s;
+}
+button:hover {
+    transform: scale(1.2);
+}
+
+- Flexbox:
+Exemplo:
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+- Responsividade:
+Exemplo:
+@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+    }
+}

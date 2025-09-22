@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio 2 - Idade e categoria</h1>
+
+    <form method="post">
+        <fieldset>
+            <legend>Verificação de idade</legend>
+            <p>
+                <label for="idade">Insira sua idade: </label>
+                <input type="number" id="idade" required min="0">
+            </p>
+                <input type="button" value="Enviar" onclick="mostraridade()">
+
+
+        </fieldset>
+    </form>
+
+        <div id="res">
+            
+        </div>
+
+    <script>
+        function mostraridade() {
+            let idade = document.querySelector('input#idade')
+            let i = Number(idade.value)
+            let res = document.querySelector('div#res')
+
+            if (i < 0) {
+                res.innerHTML = `[ERRO] Não existe idade negativa!`
+            } else if (i <= 12) {
+                res.innerHTML = `Você é uma criança!`
+            } else if (i <= 21) {
+                res.innerHTML = `Você é um adolescente!`
+            } else {
+                res.innerHTML = `Você é um adulto!`
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
