@@ -13,7 +13,7 @@
         <fieldset>
             <legend>Lista de compras</legend>
             <p>
-                <label for="compra">Item:</label>
+                <label for="compra">Produto:</label>
                 <input type="text" id="compra" required>
             </p>
             <p>
@@ -69,14 +69,16 @@
         let valortot = 0
         
         function adicionar() {
+
         if (item.value == "" || quant.value == "" || valun.value == "") {
             alert('[ERRO] Informação faltando!')
         } else {
+
                 let itens = document.querySelector('input#compra').value
                 let quantidade = Number(quant.value)
                 let valorunitario = Number(valun.value)
                 
-                res.innerHTML += `${quantidade} ${itens.toUpperCase()}(S) por R$${valorunitario} cada <br>`
+                res.innerHTML += `${itens.toUpperCase()}(S) -------- ${quantidade}x -------- R$${valorunitario} <br>`
 
                 var quantUN = quantidade * valorunitario
 
@@ -91,6 +93,7 @@
         function limpar() {
                 res.innerHTML = ""
                 res2.innerHTML = ""
+                valortot = 0
         }
 
         function calcular () {
