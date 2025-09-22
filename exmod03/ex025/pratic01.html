@@ -1,48 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+
 </head>
 <body>
-    <h1>Desafio 2 - Idade e categoria</h1>
+    <h1 style="text-align: center;">Lista de compras</h1>
 
     <form method="post">
         <fieldset>
-            <legend>Verificação de idade</legend>
+            <legend>Lista de compras</legend>
             <p>
-                <label for="idade">Insira sua idade: </label>
-                <input type="number" id="idade" required min="0">
+                <label for="compra">Item:</label>
+                <input type="text" id="compra" required>
             </p>
-                <input type="button" value="Enviar" onclick="mostraridade()">
+            <p>
+                <label for="quant">Quantidade: </label>
+                <input type="number" id="quant" required>
+            </p>
+            <p>
+                <label for="val">Valor un: </label>
+                <input type="number" id="val" required>
+            </p>
+                <input type="button" value="Adicionar" onclick="adicionar()">
+            <p>
+                <fieldset>
+                    <legend>Itens</legend>
+                    <ul id="res">
+                          
+                    </ul>
+                </fieldset>
+            <p>
+                <input type="button" value="Calcular" onclick="calcular()">
+            </p>
+            <div id="res2"></div>
 
-
-        </fieldset>
-    </form>
-
-        <div id="res">
+            <p>
+                <input type="button" value="Limpar" onclick="limpar()" style="position: relative;left: 50%;">
+            </p>
             
-        </div>
+    </form>    
 
     <script>
-        function mostraridade() {
-            let idade = document.querySelector('input#idade')
-            let i = Number(idade.value)
-            let res = document.querySelector('div#res')
+          
+        let res = document.querySelector('ul#res')
+        let res2 = document.querySelector('div#res2')
+        let item = document.querySelector('input#compra')
+        let quant = document.querySelector('input#quant')
+        let valun = document.querySelector('input#val')
+        let valortot = 0
+        
+        function adicionar() {
+        if (item.value == "" || quant.value == "" || valun.value == "") {
+            alert('[ERRO] Informação faltando!')
+        } else {
+                let itens = document.querySelector('input#compra').value
+                let quantidade = Number(quant.value)
+                let valorunitario = Number(valun.value)
+                
+                res.innerHTML += `${quantidade} ${itens.toUpperCase()}(S) por R$${valorunitario} cada <br>`
 
-            if (i < 0) {
-                res.innerHTML = `[ERRO] Não existe idade negativa!`
-            } else if (i <= 12) {
-                res.innerHTML = `Você é uma criança!`
-            } else if (i <= 21) {
-                res.innerHTML = `Você é um adolescente!`
-            } else {
-                res.innerHTML = `Você é um adulto!`
+                var quantUN = quantidade * valorunitario
+
+                valortot = valortot + quantUN
+                
+                item.value = ""
+                item.focus()
+                quant.value = ""
+                valun.value = ""
             }
-            
         }
-    </script>
+        function limpar() {
+                res.innerHTML = ""
+                res2.innerHTML = ""
+        }
 
+        function calcular () {
+
+            res2.innerHTML = `Valor total das compras = R$${valortot}`
+        }
+
+    </script>
 </body>
 </html>
