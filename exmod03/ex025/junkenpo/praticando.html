@@ -19,13 +19,14 @@
         }
 
         header{
-            background-color: black;
+            background: black;
             color: white;
             padding: 10px;
         }
 
         section > h1{
-            background-color: white;
+            background: linear-gradient(to top,lightgray, black);
+            color: white;
             padding: 10px;
         }
 
@@ -100,8 +101,8 @@
             </div>
             <div id="cont">
                 Vitória: <div class="linha" id="vitoria">0</div>
-                Derrota: <div class="linha" id="derrota">0</div>
-                Empate: <div class="linha" id="empate">0</div>
+                | Derrota: <div class="linha" id="derrota">0</div>
+                | Empate: <div class="linha" id="empate">0</div>
             </div>
             
         
@@ -134,7 +135,7 @@
             if (numberVariable >= 0 && numberVariable <= 1/3) {
                 img2.src = 'imagens/pedraright.png'
                 maquina.innerHTML = 'Rock'
-                res.innerHTML = 'Draw'
+                res.innerHTML = 'Draw!'
 
                 contadorEmpate++
                 emp.innerHTML = `${contadorEmpate}`
@@ -142,7 +143,7 @@
             } else if (numberVariable <= 2/3) {
                 img2.src = 'imagens/papelright.png'
                 maquina.innerHTML = 'Paper'
-                res.innerHTML = 'Lose'
+                res.innerHTML = 'Lose!'
 
                 contadorDerrota++
                 der.innerHTML = `${contadorDerrota}`
@@ -150,7 +151,7 @@
             } else if (numberVariable <= 3/3) {
                 img2.src = 'imagens/tesouraright.png'
                 maquina.innerHTML = 'Scissor'
-                res.innerHTML = 'Win'
+                res.innerHTML = 'Win!'
 
                 contadorVitoria++
                 vit.innerHTML = `${contadorVitoria}`
@@ -166,7 +167,7 @@
             if (numberVariable >= 0 && numberVariable <= 1/3) {
                 img2.src = 'imagens/pedraright.png'
                 maquina.innerHTML = 'Rock'
-                res.innerHTML = 'Win'
+                res.innerHTML = 'Win!'
 
                 contadorVitoria++
                 vit.innerHTML = `${contadorVitoria}`
@@ -174,7 +175,7 @@
             } else if (numberVariable <= 2/3) {
                 img2.src = 'imagens/papelright.png'
                 maquina.innerHTML = 'Paper'
-                res.innerHTML = 'Draw'
+                res.innerHTML = 'Draw!'
 
                 contadorEmpate++
                 emp.innerHTML = `${contadorEmpate}`
@@ -182,7 +183,7 @@
             } else if (numberVariable <= 3/3) {
                 img2.src = 'imagens/tesouraright.png'
                 maquina.innerHTML = 'Scissor'
-                res.innerHTML = 'Lose'
+                res.innerHTML = 'Lose!'
 
                 contadorDerrota++
                 der.innerHTML = `${contadorDerrota}`
@@ -197,7 +198,7 @@
             if (numberVariable >= 0 && numberVariable <= 1/3) {
                 img2.src = 'imagens/pedraright.png'
                 maquina.innerHTML = 'Rock'
-                res.innerHTML = 'Lose'
+                res.innerHTML = 'Lose!'
 
                 contadorDerrota++
                 der.innerHTML = `${contadorDerrota}`
@@ -205,7 +206,7 @@
             } else if (numberVariable <= 2/3) {
                 img2.src = 'imagens/papelright.png'
                 maquina.innerHTML = 'Paper'
-                res.innerHTML = 'Win'
+                res.innerHTML = 'Win!'
 
                 contadorVitoria++
                 vit.innerHTML = `${contadorVitoria}`
@@ -213,7 +214,7 @@
             } else if (numberVariable <= 3/3) {
                 img2.src = 'imagens/tesouraright.png'
                 maquina.innerHTML = 'Scissor'
-                res.innerHTML = 'Draw'
+                res.innerHTML = 'Draw!'
 
                 contadorEmpate++
                 emp.innerHTML = `${contadorEmpate}`
