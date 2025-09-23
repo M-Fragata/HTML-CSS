@@ -9,6 +9,9 @@
 
         body{
             background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            justify-content: center;
         }
 
         div img#jogo2{
@@ -16,34 +19,62 @@
         }
         .linha{
             display: inline;
-            margin: 50px;
+            margin: auto;
         }
+
+        p#botao > button{
+           padding: 10px; 
+           margin: 10px;
+           background: lightpink;
+           border: 1px solid rgba(192, 192, 192, 0.342);
+           font-weight: bolder;
+           width: 70px;
+           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.479);
+        }
+
+        p#botao > button:hover{
+            background: linear-gradient(to bottom, lightpink, white );
+            border: 0.1px solid black;
+            
+        }
+
+        div#res{
+            border: 2px solid black;
+            width: 70px;
+            padding: 10px;
+            border-radius: 30%;
+            background: lightpink;
+            font-weight: bolder;
+        }
+
 
     </style>
 
 </head>
 <body>
-<h1>Try ur luck</h1>
 
-<p>   
-    <button onclick="pedra()">Rock</button>
-    <button onclick="papel()">Papel</button>
-    <button onclick="tesoura()">Scissor</button>
-</p>
+    <section>
+        <h1>Good Luck</h1>
 
-    <div id="maquina"></div>
+        <p id="botao">   
+            <button onclick="pedra()">Rock</button>
+            <button onclick="papel()">Papel</button>
+            <button onclick="tesoura()">Scissor</button>
+        </p>
 
-    <div class="linha">
+            <div id="maquina"></div>
 
-        <img id="jogo" src="imagens/pedraleft.png" alt="">
+            <div class="linha">
 
-        <div id="res" class="linha"></div>
+                <img id="jogo" src="imagens/pedraleft.png" alt="">
 
-        <img id="jogo2" src="imagens/pedraright.png" alt="">
+                <div id="res" class="linha"  ></div>
 
-    </div>
-    
+                <img id="jogo2" src="imagens/pedraright.png" alt="">
 
+            </div>
+        
+    </section>
     
 
 
@@ -54,6 +85,8 @@
             const res = document.querySelector('div#res')
             const img = document.querySelector('img#jogo')
             const img2 = document.querySelector('img#jogo2')
+
+            res.innerHTML = 'Result!'
 
         function pedra() {
 
