@@ -42,7 +42,7 @@
             height: auto;
         }
 
-        p#botao > button{
+        #botao > button{
            padding: 10px; 
            margin: 40px 10px 60px 10px;
            background: lightpink;
@@ -52,7 +52,7 @@
            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.479);
         }
 
-        p#botao > button:hover{
+        #botao > button:hover{
             background: linear-gradient(to bottom, lightpink, white );
             border: 0.1px solid black;
         }
@@ -104,6 +104,9 @@
                 | Derrota: <div class="linha" id="derrota">0</div>
                 | Empate: <div class="linha" id="empate">0</div>
             </div>
+            <div id="botao" style="text-align: left;">
+                <button onclick="limpar()">Restart</button>
+            </div>
             
         
     </section>
@@ -127,7 +130,8 @@
 
             res.innerHTML = 'Result!'
 
-        function pedra() {
+
+            function pedra() {
 
             const numberVariable = Math.random()
             img.src = "imagens/pedraleft.png"
@@ -221,6 +225,19 @@
 
             }
         }
+
+
+        function limpar() {
+            contadorVitoria = 0
+            vit.innerHTML = `${contadorVitoria}`
+            contadorDerrota = 0
+            der.innerHTML = `${contadorDerrota}`
+            contadorEmpate = 0
+            emp.innerHTML = `${contadorEmpate}`
+        }
+
+        
+
         
     </script>
 
