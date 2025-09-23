@@ -14,9 +14,6 @@
             justify-content: center;
         }
 
-        div img#jogo{
-           margin-left: 130px;
-        }
         .linha{
             display: inline;
             margin: auto;
@@ -47,6 +44,10 @@
             font-weight: bolder;
         }
 
+        div#cont{
+            margin: 40px;
+        }
+
 
     </style>
 
@@ -73,18 +74,18 @@
                 <img id="jogo2" src="imagens/pedraright.png" alt="">
 
             </div>
-
-            <div id="vitoria" class="linha">Win: </div>
-            <div id="derrota" class="linha">Lose: </div>
-            <div id="empate" class="linha">Draw: </div>
+            <div id="cont">
+                Vitória: <div class="linha" id="vitoria">0</div>
+                Derrota: <div class="linha" id="derrota">0</div>
+                Empate: <div class="linha" id="empate">0</div>
+            </div>
+            
         
     </section>
     
 
 
-    <script>
-
-            let contador = 0            
+    <script>           
 
             const maquina = document.querySelector('div#maquina')
             const res = document.querySelector('div#res')
@@ -94,6 +95,10 @@
             let vit = document.querySelector('div#vitoria')
             let der = document.querySelector('div#derrota')
             let emp = document.querySelector('div#empate')
+
+            let contadorVitoria = 0
+            let contadorDerrota = 0
+            let contadorEmpate = 0
 
             res.innerHTML = 'Result!'
 
@@ -106,14 +111,26 @@
                 img2.src = 'imagens/pedraright.png'
                 maquina.innerHTML = 'Rock'
                 res.innerHTML = 'Draw'
+
+                contadorEmpate++
+                emp.innerHTML = `${contadorEmpate}`
+
             } else if (numberVariable <= 2/3) {
                 img2.src = 'imagens/papelright.png'
                 maquina.innerHTML = 'Paper'
                 res.innerHTML = 'Lose'
+
+                contadorDerrota++
+                der.innerHTML = `${contadorDerrota}`
+
             } else if (numberVariable <= 3/3) {
                 img2.src = 'imagens/tesouraright.png'
                 maquina.innerHTML = 'Scissor'
                 res.innerHTML = 'Win'
+
+                contadorVitoria++
+                vit.innerHTML = `${contadorVitoria}`
+
             }
         }
 
@@ -126,14 +143,25 @@
                 img2.src = 'imagens/pedraright.png'
                 maquina.innerHTML = 'Rock'
                 res.innerHTML = 'Win'
+
+                contadorVitoria++
+                vit.innerHTML = `${contadorVitoria}`
+
             } else if (numberVariable <= 2/3) {
                 img2.src = 'imagens/papelright.png'
                 maquina.innerHTML = 'Paper'
                 res.innerHTML = 'Draw'
+
+                contadorEmpate++
+                emp.innerHTML = `${contadorEmpate}`
+
             } else if (numberVariable <= 3/3) {
                 img2.src = 'imagens/tesouraright.png'
                 maquina.innerHTML = 'Scissor'
                 res.innerHTML = 'Lose'
+
+                contadorDerrota++
+                der.innerHTML = `${contadorDerrota}`
             }
         }
 
@@ -146,14 +174,26 @@
                 img2.src = 'imagens/pedraright.png'
                 maquina.innerHTML = 'Rock'
                 res.innerHTML = 'Lose'
+
+                contadorDerrota++
+                der.innerHTML = `${contadorDerrota}`
+
             } else if (numberVariable <= 2/3) {
                 img2.src = 'imagens/papelright.png'
                 maquina.innerHTML = 'Paper'
                 res.innerHTML = 'Win'
+
+                contadorVitoria++
+                vit.innerHTML = `${contadorVitoria}`
+
             } else if (numberVariable <= 3/3) {
                 img2.src = 'imagens/tesouraright.png'
                 maquina.innerHTML = 'Scissor'
                 res.innerHTML = 'Draw'
+
+                contadorEmpate++
+                emp.innerHTML = `${contadorEmpate}`
+
             }
         }
         
