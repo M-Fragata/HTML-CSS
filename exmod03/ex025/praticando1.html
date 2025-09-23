@@ -4,36 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        body{
+            position: relative;
+            background-color: rgb(128, 149, 156);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#log{
+            position: absolute;
+            border: 1px solid black;
+            padding: 20px;
+            left: 50%;
+            transform: translate(-50%,150%);
+            background-color: lightgray;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.466);
+        }
+        div#log > h1 {
+            text-align: center;
+        }
+        input#botao{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+        }
+        input#botao:hover{
+            background: rgb(255, 255, 255);
+            color: black;
+            border-color: silver;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.466);
+            transition: background .5s, color .5s, border .5s;
+        }
+    </style>
+
 </head>
 <body>
-    <form method="post" onsubmit="enviarSenha(event)">
+
+    <div id="log">
+        <h1>Tela de Login</h1>
         <p>
-            <label for="mail">Insira seu E-mail: </label>
-            <input type="email" name="" id="mail">
+            <label for="usu">Usuário: </label>
+            <input type="text" name="" id="usu">
         </p>
         <p>
-            <input type="submit" value="Gerar e enviar senha">
+            <label for="sen">Senha: </label>
+            <input type="text" name="" id="sen">
         </p>
-    </form>  
-    <div id="res"></div> 
-    
-    <script>
-        async function enviarSenha(e) {
-            e.preventDefault()
-            const email = document.querySelector('input#mail').value
-
-            let res = document.querySelector('div#res')
-
-            const response = await fetch("http://localhost:3000/enviar", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email })
-      })
-
-            const data = await response.json()
-            res.innerHTML = data.message
-    }      
-    </script>
+        <p>
+            <input type="button" value="Entrar" id="botao">
+        </p>
+    </div>
 
 </body>
 </html>
