@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de notas</title>
+
+    <style>
+
+        body{
+            background-color: lightgray;
+        }
+
+        div img#jogo2{
+           
+        }
+        .linha{
+            display: inline;
+            margin: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>Try ur luck</h1>
+
+<p>   
+    <button onclick="pedra()">Rock</button>
+    <button onclick="papel()">Papel</button>
+    <button onclick="tesoura()">Scissor</button>
+</p>
+
+    <div id="maquina"></div>
+
+    <div class="linha">
+
+        <img id="jogo" src="imagens/pedraleft.png" alt="">
+
+        <div id="res" class="linha"></div>
+
+        <img id="jogo2" src="imagens/pedraright.png" alt="">
+
+    </div>
+    
+
+    
+
+
+    <script>
+
+            
+            const maquina = document.querySelector('div#maquina')
+            const res = document.querySelector('div#res')
+            const img = document.querySelector('img#jogo')
+            const img2 = document.querySelector('img#jogo2')
+
+        function pedra() {
+
+            const numberVariable = Math.random()
+            img.src = "imagens/pedraleft.png"
+
+            if (numberVariable >= 0 && numberVariable <= 1/3) {
+                img2.src = 'imagens/pedraright.png'
+                maquina.innerHTML = 'Rock'
+                res.innerHTML = 'Draw'
+            } else if (numberVariable <= 2/3) {
+                img2.src = 'imagens/papelright.png'
+                maquina.innerHTML = 'Paper'
+                res.innerHTML = 'Lose'
+            } else if (numberVariable <= 3/3) {
+                img2.src = 'imagens/tesouraright.png'
+                maquina.innerHTML = 'Scissor'
+                res.innerHTML = 'Win'
+            }
+        }
+
+        function papel() {
+
+            const numberVariable = Math.random()
+            img.src = "imagens/papelleft.png"
+
+            if (numberVariable >= 0 && numberVariable <= 1/3) {
+                img2.src = 'imagens/pedraright.png'
+                maquina.innerHTML = 'Rock'
+                res.innerHTML = 'Win'
+            } else if (numberVariable <= 2/3) {
+                img2.src = 'imagens/papelright.png'
+                maquina.innerHTML = 'Paper'
+                res.innerHTML = 'Draw'
+            } else if (numberVariable <= 3/3) {
+                img2.src = 'imagens/tesouraright.png'
+                maquina.innerHTML = 'Scissor'
+                res.innerHTML = 'Lose'
+            }
+        }
+
+        function tesoura() {
+
+            const numberVariable = Math.random()
+            img.src = "imagens/tesouraleft.png"
+
+            if (numberVariable >= 0 && numberVariable <= 1/3) {
+                img2.src = 'imagens/pedraright.png'
+                maquina.innerHTML = 'Rock'
+                res.innerHTML = 'Lose'
+            } else if (numberVariable <= 2/3) {
+                img2.src = 'imagens/papelright.png'
+                maquina.innerHTML = 'Paper'
+                res.innerHTML = 'Win'
+            } else if (numberVariable <= 3/3) {
+                img2.src = 'imagens/tesouraright.png'
+                maquina.innerHTML = 'Scissor'
+                res.innerHTML = 'Draw'
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

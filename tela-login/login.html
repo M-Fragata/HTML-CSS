@@ -48,19 +48,22 @@
 <body>
 
     <div id="log">
-        <h1>Tela de Login</h1>
-        <form action="/login" method="post"></form>
-        <p>
-            <label for="usu">Usuário: </label>
-            <input type="text" name="" id="usu" placeholder="usuário" required>
-        </p>
-        <p>
-            <label for="sen">Senha: </label>
-            <input type="password" name="" id="sen" placeholder="senha" required>
-        </p>
-        <p>
-            <input type="submit" value="Entrar" id="botao">
-        </p>
+        <form action="/login" method="post">
+            <fieldset>
+                <legend>Tela de Login</legend>
+                <p>
+                    <label for="usuario">Usuário: </label>
+                    <input type="text" name="usuario" id="usuario" placeholder="usuário" required>
+                </p>
+                <p>
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" id="senha" placeholder="senha" required>
+                </p>
+                <p>
+                    <input type="submit" value="Entrar" id="botao">
+                </p>
+            </fieldset>
+        </form>  
     </div>
 
 </body>
