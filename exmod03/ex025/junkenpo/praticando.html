@@ -14,8 +14,8 @@
             justify-content: center;
         }
 
-        div img#jogo2{
-           
+        div img#jogo{
+           margin-left: 130px;
         }
         .linha{
             display: inline;
@@ -73,6 +73,10 @@
                 <img id="jogo2" src="imagens/pedraright.png" alt="">
 
             </div>
+
+            <div id="vitoria" class="linha">Win: </div>
+            <div id="derrota" class="linha">Lose: </div>
+            <div id="empate" class="linha">Draw: </div>
         
     </section>
     
@@ -80,11 +84,16 @@
 
     <script>
 
-            
+            let contador = 0            
+
             const maquina = document.querySelector('div#maquina')
             const res = document.querySelector('div#res')
             const img = document.querySelector('img#jogo')
             const img2 = document.querySelector('img#jogo2')
+
+            let vit = document.querySelector('div#vitoria')
+            let der = document.querySelector('div#derrota')
+            let emp = document.querySelector('div#empate')
 
             res.innerHTML = 'Result!'
 
