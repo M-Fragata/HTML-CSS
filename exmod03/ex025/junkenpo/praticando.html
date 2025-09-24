@@ -202,9 +202,12 @@
         function papel() {
 
             const numberVariable = Math.random()
-            img.src = "imagens/papelleft.png"
+            img.src = "imagens/pedraleft.png"
+            img2.src = "imagens/pedraright.png"
             animar(img);
             animar(img2);
+
+            img.src = "imagens/papelleft.png"
 
             if (numberVariable >= 0 && numberVariable <= 1/3) {
                 img2.src = 'imagens/pedraright.png'
@@ -235,10 +238,12 @@
         function tesoura() {
 
             const numberVariable = Math.random()
+            img.src = "imagens/pedraleft.png"
+            img2.src = "imagens/pedraright.png"
             animar(img);
             animar(img2);
+            
             img.src = "imagens/tesouraleft.png"
-
 
             if (numberVariable >= 0 && numberVariable <= 1/3) {
                 img2.src = 'imagens/pedraright.png'
@@ -280,6 +285,9 @@
             der.innerHTML = `${contadorDerrota}`
             contadorEmpate = 0
             emp.innerHTML = `${contadorEmpate}`
+
+            img.src = "imagens/pedraleft.png"
+            img2.src = "imagens/pedraright.png"
         }
 
     </script>
