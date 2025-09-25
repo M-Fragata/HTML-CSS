@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        <label for="num1">Digite um número: </label>
+        <input type="number" name="" id="num1">
+    </p>
+    <p>
+        <label for="num2">Digite um número: </label>
+        <input type="number" name="" id="num2">
+    </p>
+    <p>
+        <button onclick="somatorio()">Somar</button>
+    </p>
+    <div id="res"></div>
+
+    <script>
+
+        const num1 = document.querySelector('input#num1')
+        const num2 = document.querySelector('input#num2')
+
+        const n1 = Number(num1.value)
+        const n2 = Number(num2.value)
+
+        const res = document.querySelector('div#res')
+
+        function soma(a, b) {
+            return a + b
+        }
+
+        function somatorio() {
+            soma(n1, n2)
+            res.innerHTML = `${soma}`
+        }
+
+    </script>
+</body>
+</html>
