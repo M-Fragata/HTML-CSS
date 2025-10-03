@@ -25,7 +25,7 @@ grandes telas: acima de 1600px
     }
 
     main{
-        columns: 2 ;
+        width: 768px;
     }
 
 }
