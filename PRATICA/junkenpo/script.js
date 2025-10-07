@@ -20,9 +20,9 @@ function jogo(a) {
             alert('Adversário: papel - você: papel - Empatou!')
         } else if (a == 'scissors')
             alert('Adversário: papel - você: tesoura - Ganhou!') 
-    } else if (maquina <= 3/3) {
+    } else if (maquina < 3/3) {
         if (a == 'rock') {
-            alert(`Adversário: tesoura - você: pedra - Perdeu!`)
+            alert(`Adversário: tesoura - você: pedra - Ganhou!`)
         } else if (a == 'paper') {
             alert('Adversário: tesoura - você: papel - Perdeu!')
         } else if (a == 'scissors')
