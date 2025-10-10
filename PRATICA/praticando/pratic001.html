@@ -4,23 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+
+
 </head>
 <body>
     
     <div>
-        <p>Clique no botão</p>
+        <label for="text1">Nome do aluno: </label>
+        <input type="text" id="text1">
+    </div>   
+
+    <div id="res">
+        <input type="button" value="Enviar" onclick="enviar()">
     </div>
-    <div>
-        <input type="button" value="Mudar" onclick="mudar()">
-    </div>
+
+    <ul id="lista">
+
+    </ul>
+
+    <input type="button" value="Carregar" onclick="carregar()">
+
+    <div id="carregar"></div>
 
     <script>
 
+        function enviar() {
+            let nome = (document.querySelector('input#text1').value)
 
+            let li = document.createElement('li')
+            li.textContent = nome;
 
-        function mudar() {
-            document.querySelector('p').textContent = 'Olá, mundo!'
+            document.querySelector('ul#lista').appendChild(li)
+
+            document.querySelector('input#text1').value = ""
+
         }
+
     </script>
 
 </body>
