@@ -5,39 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 
+    <style>
+        body{
+            background-color: black;
+        }
+        section{
+            background-color: lightgray;
+            margin: auto;
+            width: 200px;
+            min-height: 300px;
+        }
+        li{
+            padding: 10px;
+        }
+
+        #text1{
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        #but{
+            background-color: white;
+            border-radius: 10px;
+        }
+
+    </style>
 
 </head>
 <body>
     
-    <div>
-        <label for="text1">Nome do aluno: </label>
-        <input type="text" id="text1">
-    </div>   
+    <section>
+        <div>
+            <input type="text" id="text1" placeholder=" Usuário">
+        </div>
+        <div id="res">
+            <input type="button" id="but" value="Enviar" onclick="enviar()">
+        </div>
+        <ul id="lista">
+        </ul>
+    </section>
 
-    <div id="res">
-        <input type="button" value="Enviar" onclick="enviar()">
-    </div>
-
-    <ul id="lista">
-
-    </ul>
-
-    <input type="button" value="Carregar" onclick="carregar()">
-
-    <div id="carregar"></div>
 
     <script>
 
         function enviar() {
-            let nome = (document.querySelector('input#text1').value)
 
-            let li = document.createElement('li')
-            li.textContent = nome;
+            if ((document.querySelector('input#text1').value) === "") {
+                alert('[ERRO] Informe um nome!')
+            } else {
+                let nome = (document.querySelector('input#text1').value)
 
-            document.querySelector('ul#lista').appendChild(li)
+                let li = document.createElement('li')
+                li.textContent = nome;
 
-            document.querySelector('input#text1').value = ""
+                let but = document.createElement('button')
+                but.textContent = 'Remover'
+                but.addEventListener('click', () => {
+                    li.remove()
+                })
 
+                li.appendChild(but)
+                document.querySelector('ul#lista').appendChild(li)
+
+                document.querySelector('input#text1').value = ""
+            }   
         }
 
     </script>
