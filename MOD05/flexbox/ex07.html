@@ -18,26 +18,39 @@
             background-color: lightblue;
             border: 1px solid black;
             width: 100px;
-            height: 200px;
-           
+
         }
+         
+        div#i1{
+            align-self: auto;
+            order: -1;
+        } 
+        div#i2{
+            align-self: center;
+            order: -4;
+        }  
+        div#i3{
+            align-self: flex-start;
+            order: 0;
+        }  
+        div#i4{
+            align-self: flex-end;
+            order: -2;
+        }  
+        div#i5{
+            align-self: stretch;
+            order: 0;
+        }     
+
     </STYLE>
 </head>
 <body>
     <div id="conteiner">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item" style="order:-3">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
-        <div class="item" style="order:-1">H</div>
-        <div class="item">i</div>
-        <div class="item">J</div>
-        <div class="item" style="order:-2">K</div>
-        <div class="item">L</div>
-        <div class="item">M</div>
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
     </div>
 </body>
 </html>
