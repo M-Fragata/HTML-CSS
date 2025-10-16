@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+
+        body{
+            background-color: lightgray;
+        }
+
+        header{
+            background-color: grey;
+
+            h1{
+                font-size: 3rem;
+                color: white;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            ul{
+                display: flex;
+                flex-flow: column nowrap;
+
+                @media screen and (min-width: 700px){
+                    flex-flow: row nowrap;
+                }
+            }
+
+            li{
+
+                display: flex;
+                justify-content: center;
+                flex: 1 1 auto;
+
+                text-decoration: none;
+                margin: 10px;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                border-radius: 10px;  
+            }
+            
+            li:hover{
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+        }
+
+        main {
+            width: 90vw;
+            max-width: 1000px;
+            margin: 20px auto 20px auto;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.425);
+
+            h2{
+                font-size: 2rem;
+                text-align: center; 
+                margin-bottom: 20px;
+                padding: 10px;
+            }
+
+            p{
+                text-indent: 20px;
+                padding: 10px;
+                font-size: 1.5rem;
+            }}
+
+            footer{
+                display: flex;
+                background-color: black;
+                color: white;
+                padding: 10px;
+                justify-content: center;
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+
+    </style>        
+
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <ul>
+            <li>Opção 1</li>
+            <li>Opção 2</li>
+            <li>Opção 3</li>
+            <li>Opção 4</li>
+            <li>Opção 5</li>
+            <li>Opção 6</li>
+        </ul>
+    </header>   
+    <main>
+        <h2><strong>Teste de Flexbox</strong></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni sed tenetur cum eligendi temporibus accusamus molestias natus, facilis qui illo voluptates porro dolorem iure numquam soluta praesentium dignissimos iusto officiis voluptate. Necessitatibus rerum animi id mollitia, impedit maiores nisi numquam velit. Magnam, consequuntur. Eligendi eaque veniam perspiciatis quibusdam ratione. Debitis praesentium, mollitia repellendus quisquam suscipit sapiente doloribus earum est impedit, temporibus sed rerum similique, nesciunt beatae aut voluptatum vel? In fugit eius quisquam nihil! Hic molestiae alias quidem, praesentium corporis porro perspiciatis architecto sint officia voluptatem consequatur nisi harum cupiditate a nesciunt animi consectetur eos sunt, expedita, ut excepturi quaerat tempore veniam? Temporibus id tenetur sapiente veritatis repellendus, facilis quibusdam assumenda odio ab dolores perspiciatis hic maiores aliquid illo a magni expedita suscipit sequi eligendi ipsum doloremque, totam nisi et quis! Reiciendis, aperiam, quam culpa blanditiis quas a quis est amet sapiente fugit aliquid rerum quibusdam beatae distinctio nihil alias minima doloremque repudiandae explicabo repellendus vero assumenda soluta! Dignissimos nemo consectetur quisquam sapiente, dolores deserunt error nulla minus voluptas reiciendis accusamus? Soluta adipisci, illo et eveniet culpa id sed quo omnis enim eius est vero dolore nobis odio veritatis aliquam labore qui! Ducimus magnam vero nobis corporis? Maxime expedita blanditiis porro veniam enim dolorem possimus pariatur tempora quisquam atque? Quisquam officiis soluta facere suscipit sint aliquam ratione, dolor illo porro nisi consectetur iste, harum eveniet ullam? Obcaecati veritatis voluptate optio quod odio! Odit consequatur voluptatum dicta nobis delectus. Voluptatum itaque vero obcaecati cumque laudantium modi, temporibus consectetur maiores velit esse omnis nobis voluptate iste hic placeat dolorem a cupiditate, inventore iure minus ratione doloribus dolores eos excepturi? Excepturi beatae tempore quisquam facilis nobis dignissimos et fugit iusto quas, eaque aperiam? Ea, atque? Deleniti est ipsa earum, neque perspiciatis repudiandae. Iure tempora dignissimos cumque rerum libero optio quibusdam provident suscipit ullam minima. Id officia quam ullam aliquam quod laudantium consectetur, maxime beatae dolorem. Illo odit voluptatum, suscipit natus mollitia quae eos aspernatur voluptate repudiandae saepe nostrum, quod adipisci sit laboriosam sunt? Accusantium veritatis quia repellat exercitationem maxime error harum. Odio quae, ab aut cupiditate, laborum culpa, animi dolorem ratione veritatis enim corporis possimus? Deleniti excepturi quae, quisquam ad sit iusto. Cupiditate cum similique accusantium soluta quibusdam cumque error, libero corrupti ad ratione ut recusandae delectus culpa nam rem consequuntur. Explicabo alias laboriosam sunt, amet esse mollitia, id fugiat unde saepe reiciendis eligendi. Provident numquam a quas voluptas ullam fugit culpa?</p>
+    </main> 
+    <footer>
+        <p>Desenvolvido por <strong>Fragata</strong></p>
+    </footer>
+</body>
+</html>
