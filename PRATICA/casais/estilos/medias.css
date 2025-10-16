@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@media screen and (min-width: 700px) {
+        main{
+            flex-flow: row nowrap;
+
+        }
+        div.item{
+            justify-content: flex-start;
+        }
+}

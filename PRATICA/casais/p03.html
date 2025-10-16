@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casais</title>
+    <link rel="stylesheet" href="estilos/phone.css">
+    <link rel="stylesheet" href="estilos/medias.css">
+
+</head>
+<body>
+    <header>    <h1>Gerador de Casais</h1>  </header>
+    <main>
+        <div class="item" id="i1">
+            <img src="imagens/esther.jpg" alt="imagem-Esther">
+            <p>
+                Nome: Esther <br>
+                24 anos <br>
+                Solteira
+            </p>
+        </div>
+        <div class="item" id="i2">
+            <img src="imagens/malu.jpg" alt="imagem-Malu">
+            <p>
+                Nome: Malu <br>
+                Idade: 24 anos <br>
+                Solteira
+            </p>
+        </div>
+        <div class="item" id="i3">
+            <img src="imagens/kister.jpg" alt="imagem-Kister">
+            <p>
+                Nome: Kister <br>
+                Idade: 24 anos <br>
+                Solteiro
+            </p>   
+        </div>
+        <div class="item" id="i4">
+            <img src="imagens/fragata.jpg" alt="imagem-Fragata">
+            <p>
+                Nome: Fragata <br>
+                Idade: 24 anos <br>
+                Solteiro
+            </p>
+        </div>
+    </main>
+    <section>
+        <input type="button" value="Gerar" onclick="gerar()">
+        <div id="res1" class="hiden">
+            <img id="foto1" src="imagens/fragata.jpg" alt="imagem-Fragata">
+        </div>
+        <div id="res2" class="hiden">
+            <img id="foto2" src="imagens/kister.jpg" alt="imagem-Kister">
+        </div>
+    </section>
+  
+    <script>
+        function gerar() {
+
+            let res1 = document.querySelector('div#res1')
+            let res2 = document.querySelector('div#res2')
+
+            let foto1 = document.querySelector('#foto1')
+            let foto2 = document.querySelector('#foto2')
+            
+            par1()
+            par2()
+        }
+
+        function par1 () {
+
+            const sorteio = Math.random()
+
+            if (sorteio < 1/4) {
+                return foto1.src = "imagens/esther.jpg"
+            } else if (sorteio < 2/4) {
+                return foto1.src = "imagens/malu.jpg"
+            } else if (sorteio < 3/4) {
+                return foto1.src = "imagens/kister.jpg"
+            } else {
+                return foto1.src = "imagens/fragata.jpg"
+            }
+        }
+
+        function par2 () {
+            
+            const sorteio = Math.random()
+
+            if (sorteio < 1/4) {
+                foto2.src = "imagens/fragata.jpg"
+            } else if (sorteio < 2/4) {
+                foto2.src = "imagens/kister.jpg"
+            } else if (sorteio < 3/4) {
+                foto2.src = "imagens/esther.jpg"
+            } else {
+                foto2.src = "imagens/malu.jpg"
+            }
+        }
+    </script>
+
+</body>
+</html>
