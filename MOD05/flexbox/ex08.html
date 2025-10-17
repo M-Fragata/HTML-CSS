@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        div#container{
+    <STYLE>
+        div#conteiner{
             display: flex;
-            background-color: rgb(44, 255, 255);
-            flex-flow: row wrap;
+            background-color: lightsalmon;
+            flex-flow: row nowrap;
+
         }
         div.item{
-            background-color: brown;
+            background-color: lightblue;
             border: 1px solid black;
-            flex-basis: 250px;
-            flex-grow: 1;
         }
-    </style>
 
+        div#i1{
+            flex: 1 0 250px;
+            /* growth shrink e basis*/
+        }
+        div#i2{
+            flex: 0 2 250px;
+            /* growth shrink e basis*/
+        }
+        div#i3{
+            flex: 2 1 250px;
+            /* growth shrink e basis */
+        }
+
+    </STYLE>
 </head>
 <body>
-    <div id="container">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-
-    </div> 
+    <div id="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+    </div>
 </body>
 </html>
