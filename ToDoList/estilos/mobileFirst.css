@@ -84,24 +84,29 @@ input#text1{
 
 div.res{
     background-color: #fff;
-    display: flex;
-    margin: 10px;
-    border: 1px dashed black;
+    margin: 10px 10px 0px 10px;
     border-radius: 10px;
     padding: 12px;
-    justify-content: space-between;
     font-size: 1.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
 }
 div#res{
-    display: flex;
-    flex-flow: column wrap;
+
     height: 70%;
+    overflow-y: auto;
+    
 }
 img{
     width: 20px;
 }
 
 .lixeira{
+    align-self: flex-end;
     background-color: #fff;
     border:none;
     transform: scale(1.4);
