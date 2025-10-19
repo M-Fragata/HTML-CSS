@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1000px){
+    main{
+        max-width: 1000px;
+    }
+    div#item{
+        flex-flow: row nowrap;
+    }
+    input#text1{
+        flex: 1 1 auto;
+    }
+    div.res{
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+}

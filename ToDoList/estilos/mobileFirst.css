@@ -1,0 +1,112 @@
+@charset "UTF-8";   
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: lightpink;
+}
+
+main{
+    /*
+    Centralizando sem flexbox
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    display: flex;
+    flex-flow: column nowrap;
+
+    flex-flow: 1 1 auto ;
+
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.774);
+    background-color: #ffe7e7;
+    width: 90dvw;
+    height: 90dvh;
+    padding: 10px;
+    border-radius:10px;
+}
+div#header{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+div#cabecalho{
+    margin-bottom: 20px;
+}
+div#cabecalho > a{
+    color: lightpink;
+    border: none;
+    background-color: #ffe7e7;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+div#item{
+    display: flex;
+    flex-flow: column nowrap;
+}
+input#text1{
+    padding: 15px;
+    flex: 1 1 auto;
+    margin: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#button{
+    background-color: lightpink;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 10px;
+}
+#button:hover{
+    transform: scale(1.05);
+    font-weight: bold;
+    background-color: rgb(252, 160, 173);
+    transition: transform .5s, font-weight .5s;
+}
+
+div.res{
+    background-color: #fff;
+    display: flex;
+    margin: 10px;
+    border: 1px dashed black;
+    border-radius: 10px;
+    padding: 12px;
+    justify-content: space-between;
+}
+div#res{
+    display: flex;
+    flex-flow: column wrap;
+    height: 70%;
+}
+img{
+    width: 20px;
+}
+
+.lixeira{
+    background-color: #fff;
+    border:none;
+    transform: scale(1.2);
+}
+.lixeira:hover{
+    transform: rotate(20%);
+}
+
+
