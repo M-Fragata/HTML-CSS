@@ -90,6 +90,7 @@ div.res{
     border-radius: 10px;
     padding: 12px;
     justify-content: space-between;
+    font-size: 1.3rem;
 }
 div#res{
     display: flex;
@@ -103,10 +104,16 @@ img{
 .lixeira{
     background-color: #fff;
     border:none;
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 .lixeira:hover{
-    transform: rotate(20%);
+    transform: scale(1.6);
 }
 
+.mark{
+    transform: scale(2);
+}
+.mark:hover{
+    transform: scale(2.2);
+}
 

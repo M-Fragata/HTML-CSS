@@ -5,8 +5,9 @@ const text1 = document.querySelector('input#text1')
 const res = document.querySelector('div#res')
 
 button.addEventListener('click', () => {
-    const item = document.querySelector('input#text1').value
-    console.log(item)
+    let item = document.querySelector('input#text1').value
+ 
+    item = item.toUpperCase()
 
     if(item == "") {
         alert('Digite um item')
@@ -34,6 +35,8 @@ button.addEventListener('click', () => {
     //Criando botão de marcação
     const buttonMarked = document.createElement("input")
     buttonMarked.type = "checkbox"
+
+    buttonMarked.classList.add('mark')
 
     //Criando uma nova div
     const newDiv = document.createElement('div')
